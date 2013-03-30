@@ -59,7 +59,7 @@ WARNING: there is no cleanup of bytecode yet, so evaling a lot would surely exha
 
 * It can even disassemble itself
 
-
+<pre>
     no.disassemble=> (println (disassemble disassemble))
     // Compiled from disassemble.clj (version 1.5 : 49.0, super bit)
     public final class no.disassemble$disassemble extends clojure.lang.AFunction {
@@ -264,7 +264,7 @@ WARNING: there is no cleanup of bytecode yet, so evaling a lot would surely exha
     }
     nil
     no.disassemble=> 
-
+</pre>
 
 
 ## License
