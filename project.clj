@@ -1,6 +1,6 @@
 (def version (:version (read-string (slurp "build-meta.edn"))))
 
-(defproject nodisassemble "0.1.0-SNAPSHOT"
+(defproject nodisassemble version
   :description "FIXME: write description"
   :url "http://example.com/FIXME"
   :license {:name "Eclipse Public License"
