@@ -1,10 +1,17 @@
 # lein-nodisassemble
 
-A Leiningen plugin to add no.disassemble to your project.  Should only be used in a dev profile of some sort.
+A Leiningen plugin to add no.disassemble to your project and startup the jvm instrumentation properly.  Should only be used in a dev profile of some sort.
+
+## Artifacts
+The Most Recent Release is deployed to clojars
+
+With Leiningen:
+
+     {:plugins [[nodisassemble "0.1.0"]]}
 
 ## Usage
 
-Put `[lein-nodisassemble "0.1.0-SNAPSHOT"]` into the `:plugins` vector of your project.clj.
+Put `[lein-nodisassemble "0.1.0"]` into the `:plugins` vector of your project.clj.
 
 Look at the documentation for no.disassemble for usage.
 

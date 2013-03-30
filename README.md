@@ -2,6 +2,15 @@
 
 A Clojure library designed to let you inspect bytecode of functions and things.
 
+## Artifacts 
+The Most Recent Release is available on clojars
+
+With Leiningen:
+
+     [nodisassemble "0.1.0"]
+
+HOWEVER, don't use it this way, let lein-nodissassemble's project middleware inject it for you.
+
 ## Usage
 
 no.disassemble is the runtime library created to negotiate with the agent ClassTransformer that stores class bytes globally.
