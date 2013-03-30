@@ -3,16 +3,11 @@
 
 (defn- classes
   []
-  (no.disassemble.NoDisassemble/classes))
+  (no.disassemble.NoDisassemble/getClasses))
 
 (defn- sanitize
   [classname]
   (.replace classname \. \/))
-
-(comment
-  org.eclipse.jdt.core.util.ClassFileBytesDisassembler/DETAILED
-  org.eclipse.jdt.core.util.ClassFileBytesDisassembler/SYSTEM
-  org.eclipse.jdt.core.util.ClassFileBytesDisassembler/WORKING_COPY)
 
 (def levels
   {:detailed 1
@@ -22,9 +17,7 @@
    :working-copy 16})
 
 (defn disassemble
-  [class]
-  (let [cls-name (sanitize (.getCanonicalName class))
+  [obj]
+  (let [cls-name (sanitize (.getCanonicalName (if (class? obj) obj (class obj))))
         bytecode (get (classes) cls-name)]
-    (println cls-name)
-    (println bytecode)
     (.disassemble (Disassembler.) bytecode "\n" (:detailed levels))))

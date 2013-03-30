@@ -15,11 +15,8 @@ public class NoDisassemble {
     private static void println(Object arg){
         System.out.println(arg);
     }
-    {
-        println("Initializing NoDisassemble");
-    }
     public static class ClojureTransformer implements ClassFileTransformer {
-        {println("Initializing transformer");}
+        {println("Initializing NoDisassemble Transformer");}
         public byte[] transform(ClassLoader loader, String className, 
                                 Class<?> classBeingRedefined, ProtectionDomain protectionDomain, 
                                 byte[] classBytes) throws IllegalClassFormatException {
@@ -34,9 +31,7 @@ public class NoDisassemble {
    * @param inst The instrumentation object to register with.
    */
   public static void premain(String args, Instrumentation inst) {
-      println("Adding ClojureTransformer");
-
-      inst.addTransformer(new ClojureTransformer(), true);
+      inst.addTransformer(new ClojureTransformer());
   }
 
 }
