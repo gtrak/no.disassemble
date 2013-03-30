@@ -8,7 +8,7 @@
 
   :java-source-paths ["java"]
   :manifest {"Premain-Class" "no.disassemble.NoDisassemble"
-             "Main-Class" "no.disassemble.NoDisassemble"
-             "Can-Redefine-Classes" true
-             "Can-Retransform-Classes" true}
+;;             "Can-Redefine-Classes" true
+;;             "Can-Retransform-Classes" true
+             }
   )
