@@ -20,8 +20,6 @@ In order to use no.disassemble, add lein-nodisassemble to your :plugins, which w
 WARNING: there is no cleanup of bytecode yet, so evaling a lot would surely exhaust the heap.
 
 
-    user=> (require 'no.disassemble.NoDisassemble
-    no.disassemble.NoDisassemble   
     user=> (require 'no.disassemble)
     nil
     
