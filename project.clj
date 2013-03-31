@@ -13,4 +13,7 @@
 ;;             "Can-Redefine-Classes" true
 ;;             "Can-Retransform-Classes" true
              }
+
+  :javac-options ["-target" "1.6" "-source" "1.6" "-Xlint:-options"]
+
   )

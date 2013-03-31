@@ -7,7 +7,7 @@ The Most Recent Release is available on clojars
 
 With Leiningen:
 
-     [nodisassemble "0.1.0"]
+     [nodisassemble "0.1.1"]
 
 HOWEVER, don't use it this way, let lein-nodissassemble's project middleware inject it for you.
 
