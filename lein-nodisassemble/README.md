@@ -7,7 +7,7 @@ The Most Recent Release is deployed to clojars
 
 With Leiningen:
 
-     {:plugins [[nodisassemble "0.1.1"]]}
+     {:plugins [[lein-nodisassemble "0.1.1"]]}
 
 ## Usage
 
