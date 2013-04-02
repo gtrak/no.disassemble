@@ -11,6 +11,8 @@ With Leiningen:
 
 HOWEVER, don't use it this way, let lein-nodissassemble's project middleware inject it for you.
 
+    {:plugins [[lein-nodisassemble "0.1.1"]]}
+
 ## Usage
 
 no.disassemble is the runtime library created to negotiate with the agent ClassTransformer that stores class bytes globally.
