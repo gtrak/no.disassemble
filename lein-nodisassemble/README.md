@@ -7,11 +7,11 @@ The Most Recent Release is deployed to clojars
 
 With Leiningen:
 
-     {:plugins [[lein-nodisassemble "0.1.1"]]}
+     {:plugins [[lein-nodisassemble "0.1.2"]]}
 
 ## Usage
 
-Put `[lein-nodisassemble "0.1.1"]` into the `:plugins` vector of your project.clj.
+Put `[lein-nodisassemble "0.1.2"]` into the `:plugins` vector of your project.clj.
 
 Look at the documentation for no.disassemble for usage.
 
