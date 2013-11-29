@@ -1,0 +1,5 @@
+1. Increment build version
+2. Update Documentation to reflect version
+3. Create release commit, tag it with format 'v0.1.2'
+5. Deploy main project to Clojars
+6. Deploy plugin to Clojars
