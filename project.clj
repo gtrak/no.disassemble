@@ -5,8 +5,8 @@
   :url "http://example.com/FIXME"
   :license {:name "Eclipse Public License"
             :url "http://www.eclipse.org/legal/epl-v10.html"}
-  :dependencies [[org.eclipse.jdt/core "3.3.0-v_771"]
-                 [org.eclipse.equinox/app "1.0.0-v20070606"]
+  :dependencies [[org.eclipse.jdt/org.eclipse.jdt.core "3.7.1"]
+;                 [org.eclipse.equinox/app "1.0.0-v20070606"]
                  [org.clojure/clojure "1.4.0"]]
 
   :java-source-paths ["java"]
