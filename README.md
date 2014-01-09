@@ -64,7 +64,90 @@ WARNING: there is no cleanup of bytecode yet, so evaling a lot would surely exha
     }
     nil
     no.disassemble=> 
-    
+
+You can also manipulate the disassembly as a Clojure data structure:
+
+```clj
+user=> (-> (fn []) disassemble-data pprint)
+{:minor-version 0,
+ :superclass-name clojure/lang/AFunction,
+ :class? true,
+ :major-version 49,
+ :name user$eval1321$fn__1322,
+ :interface-names [],
+ :methods
+ ({:access-flags #{:public :static},
+   :name <clinit>,
+   :clinit? true,
+   :deprecated? false,
+   :code
+   {:max-locals 0,
+    :max-stack 0,
+    :line-numbers {0 1},
+    :local-variables nil,
+    :exception-table (),
+    :raw-bytecode [-79],
+    :bytecode [[:return 0]],
+    :code-length 1},
+   :descriptor "()V",
+   :constructor? false,
+   :exception nil,
+   :synthetic? false}
+  {:access-flags #{:public},
+   :name <init>,
+   :clinit? false,
+   :deprecated? false,
+   :code
+   {:max-locals 1,
+    :max-stack 1,
+    :line-numbers {0 1},
+    :local-variables nil,
+    :exception-table (),
+    :raw-bytecode [42, -73, 0, 10, -79],
+    :bytecode
+    [[:aload_0 0]
+     [:invokespecial
+      1
+      10
+      {:kind :methodref,
+       :class-name "clojure/lang/AFunction",
+       :method-name "<init>",
+       :method-descriptor "()V"}]
+     [:return 4]],
+    :code-length 5},
+   :descriptor "()V",
+   :constructor? true,
+   :exception nil,
+   :synthetic? false}
+  {:access-flags #{:public},
+   :name invoke,
+   :clinit? false,
+   :deprecated? false,
+   :code
+   {:max-locals 1,
+    :max-stack 1,
+    :line-numbers {0 1},
+    :local-variables
+    ({:name this,
+      :descriptor "Ljava/lang/Object;",
+      :length 1,
+      :start-pc 0}),
+    :exception-table (),
+    :raw-bytecode [1, -80],
+    :bytecode [[:aconst_null 0] [:areturn 1]],
+    :code-length 2},
+   :descriptor "()Ljava/lang/Object;",
+   :constructor? false,
+   :exception nil,
+   :synthetic? false}),
+ :attributes
+ ("NO_SOURCE_FILE"
+  {:type org.eclipse.jdt.internal.core.util.ClassFileAttribute,
+   :name "SourceDebugExtension",
+   :length 94}),
+ :fields (),
+ :interface? false}
+```
 
 * It can even disassemble itself
 
