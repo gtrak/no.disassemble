@@ -1,5 +1,5 @@
 (ns no.disassemble.r
-  "Low-level diassembly of classes. Uses the Eclipse jdt disassembler, but
+  "Low-level disassembly of classes. Uses the Eclipse jdt disassembler, but
   coerces its object graph into idiomatic Clojure data structures.
   
   The motherlode: http://grepcode.com/file/repository.grepcode.com/java/eclipse.org/3.7/org.eclipse.jdt/core/3.7.0/org/eclipse/jdt/internal/core/util/Disassembler.java"
