@@ -135,7 +135,7 @@
           :name-and-type {:descriptor-index
                           (.getNameAndTypeInfoDescriptorIndex c)
                           :info-name-index (.getNameAndTypeInfoNameIndex c)}
-          :utf8     {:value (String. (.getUtf8Value c) "UTF-8")})
+          :utf8     {:value (String. (.getUtf8Value c))})
         :kind kind))))
 
 (defmacro defbytecode-visitor
