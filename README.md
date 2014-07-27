@@ -17,7 +17,7 @@ HOWEVER, don't use it this way, let lein-nodissassemble's project middleware inj
 
 no.disassemble is the runtime library created to negotiate with the agent ClassTransformer that stores class bytes globally.
 
-In order to use no.disassemble, add lein-nodisassemble to your :plugins, which will initialize the agent transformer and make bytecode available.
+In order to use no.disassemble, add lein-nodisassemble to your :plugins, which will initialize the agent transformer and make bytecode available. Please note that lein-nodisassemble will not affect lein repl sessions run outside of projects; Java agent settings are not enabled then since no JVM subprocess is spawned.
 
 WARNING: there is no cleanup of bytecode yet, so evaling a lot would surely exhaust the heap.
 
