@@ -149,7 +149,7 @@ user=> (-> (fn []) disassemble-data pprint)
  :interface? false}
 ```
 
-* It can even disassemble itself
+It can even disassemble itself:
 
 ```
 no.disassemble=> (println (disassemble disassemble))
