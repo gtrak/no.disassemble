@@ -63,7 +63,6 @@ public final class no.disassemble$eval1174$fn__1175 extends clojure.lang.AFuncti
 
 }
 nil
-no.disassemble=> 
 ```
 
 You can also manipulate the disassembly as a Clojure data structure:
@@ -356,7 +355,6 @@ public final class no.disassemble$disassemble extends clojure.lang.AFunction {
 
 }
 nil
-no.disassemble=> 
 ```
 
 ## License
