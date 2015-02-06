@@ -452,7 +452,9 @@ _impdep2 (int pc))
     {:name        (symbol (String. (.getName v)))
      :descriptor  (String. (.getDescriptor v))
      :length      (.getLength v)
-     :start-pc    (.getStartPC v)})
+     :start-pc    (.getStartPC v)
+     :index	  (.getIndex v)
+     :name-index  (.getNameIndex v)})
 
   ILocalVariableTypeTableEntry
   (coerce [v]
