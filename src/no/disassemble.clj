@@ -20,9 +20,12 @@
 (defn disassemble-str
   "Emits a string bytecode disassembly of an object or class."
   [obj]
-  (let [cls-name (sanitize (.getCanonicalName (if (class? obj) obj (class obj))))
+  (let [cls (if (class? obj) obj (class obj))
+        cls-name (sanitize (.getCanonicalName cls))
         bytecode (get (classes) cls-name)]
-    (.disassemble (Disassembler.) bytecode "\n" (:detailed levels))))
+    (if bytecode
+      (.disassemble (Disassembler.) bytecode "\n" (:detailed levels))
+      (throw (Exception. (str "Could not load bytecode for " cls ". Is the Java agent enabled?"))))))
 
 (defn disassemble-data
   "Emits a data structure disassembly of an object or class."
